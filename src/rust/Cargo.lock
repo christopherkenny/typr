@@ -62,7 +62,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rypst"
+name = "typr"
 version = "0.1.0"
 dependencies = [
  "extendr-api",

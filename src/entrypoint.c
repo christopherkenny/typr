@@ -1,8 +1,8 @@
 // We need to forward routine registration from C to Rust
 // to avoid the linker removing the static library.
 
-void R_init_rypst_extendr(void *dll);
+void R_init_typr_extendr(void *dll);
 
-void R_init_rypst(void *dll) {
-    R_init_rypst_extendr(dll);
+void R_init_typr(void *dll) {
+    R_init_typr_extendr(dll);
 }

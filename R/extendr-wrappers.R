@@ -4,10 +4,10 @@
 
 #
 # This file was created with the following call:
-#   .Call("wrap__make_rypst_wrappers", use_symbols = TRUE, package_name = "rypst")
+#   .Call("wrap__make_typr_wrappers", use_symbols = TRUE, package_name = "typr")
 
 #' @usage NULL
-#' @useDynLib rypst, .registration = TRUE
+#' @useDynLib typr, .registration = TRUE
 NULL
 
 #' Return string `"Hello world!"` to R.

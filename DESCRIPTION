@@ -1,4 +1,4 @@
-Package: rypst
+Package: typr
 Title: Write and Render 'Typst' Documents
 Version: 0.0.0.9000
 Authors@R:
