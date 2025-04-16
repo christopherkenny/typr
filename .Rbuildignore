@@ -1,7 +1,3 @@
 ^typr\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
-^src/\.cargo$
-^src/rust/vendor$
-^src/Makevars$
-^src/Makevars\.win$
