@@ -15,6 +15,7 @@ RoxygenNote: 7.3.2
 Imports: 
     cli,
     fs,
-    processx
+    processx,
+    rlang
 Depends: 
     R (>= 4.1.0)

@@ -4,7 +4,7 @@
 \alias{typr_help}
 \title{Get Help Information for a Typst command}
 \usage{
-typr_help(command)
+typr_help(command = NULL)
 }
 \arguments{
 \item{command}{name of a command to get help for, e.g. \code{'compile'}}

@@ -10,7 +10,7 @@
 #'
 #' @examplesIf has_any_typst()
 #' typr_help('compile')
-typr_help <- function(command) {
+typr_help <- function(command = NULL) {
   out <- typr_run(args = c('help', command))$stdout
   message(out)
   invisible(out)
