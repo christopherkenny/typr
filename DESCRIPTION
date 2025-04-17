@@ -13,4 +13,8 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: 
+    cli,
+    fs,
     processx
+Depends: 
+    R (>= 4.1.0)
