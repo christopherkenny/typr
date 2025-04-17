@@ -10,6 +10,8 @@
 #'
 #' @examplesIf has_any_typst()
 #' typr_compile('hello world')
+#' typr_compile(input = 'Hello world', output_format = 'png',
+#'   typst_args = c('--ppi', '300'))
 typr_compile <- function(input = NULL, output_file = NULL,
                          output_format = c('pdf', 'png', 'svg', 'html'),
                          typst_args = NULL) {

@@ -13,7 +13,8 @@ typr_help(command)
 a character vector of information, invisibly
 }
 \description{
-Get Help Information for a Typst command
+Prints a message to the terminal with help information.
+Silently returns the content as character which can be printed with \code{cat()}.
 }
 \examples{
 \dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}

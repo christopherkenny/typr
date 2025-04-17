@@ -29,5 +29,7 @@ Compile a Typst document
 \examples{
 \dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 typr_compile('hello world')
+typr_compile(input = 'Hello world', output_format = 'png',
+  typst_args = c('--ppi', '300'))
 \dontshow{\}) # examplesIf}
 }
