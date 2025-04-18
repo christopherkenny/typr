@@ -4,7 +4,6 @@
 #' @param output_file file to output to
 #' @param output_format format to use. One of `c('pdf', 'png', 'svg', 'html')`,
 #' @param typst_args Additional arguments to pass to Typst. Can be listed with `typr_help('watch')`
-#' @param port port to use. If `NULL`, a random port will be used.
 #'
 #' @returns a path to the created file
 #' @export
@@ -16,7 +15,7 @@
 #' writeLines(text = c('= test', 'hello'), con = tf)
 typr_watch <- function(input = NULL, output_file = NULL,
                        output_format = c('pdf', 'png', 'svg', 'html'),
-                       typst_args = NULL, port = NULL) {
+                       typst_args = NULL) {
   output_format <- match.arg(output_format)
 
   if (is.null(input)) {
@@ -37,9 +36,9 @@ typr_watch <- function(input = NULL, output_file = NULL,
       fs::path_ext_set(output_format)
   }
 
-  if (!any(grepl(typst_args, pattern = '--port'))) {
-    typst_args <- c(typst_args, '--port', port)
-  }
+  # if (!any(grepl(typst_args, pattern = '--port'))) {
+  #   typst_args <- c(typst_args, '--port', port)
+  # }
 
   # start process
 
@@ -52,34 +51,37 @@ typr_watch <- function(input = NULL, output_file = NULL,
   # 3. Store the process in the environment
   typr$proc <- p
 
-  Sys.sleep(1)
-
-  # 4. Get the port
-  cmd <- p$get_cmdline()
-  port <- cmd[which(cmd == '--port') + 1]
-
-  watch_url <- paste0('http://localhost:', port)
+  # # 4. Get the port
+  # cmd <- p$get_cmdline()
+  # port <- cmd[which(cmd == '--port') + 1]
+  #
+  # watch_url <- paste0('http://localhost:', port)
 
   cli::cli_inform(c(
     'Typst watch process started.',
-    'You can view the output at {.url {watch_url}}.',
+ #   'You can view the output at {.url {watch_url}}.',
     'Run {.fn typr_watch_stop} to stop the process.'
   ))
 
   # 5. Open the output file in the viewer
   if (requireNamespace('rstudioapi', quietly = TRUE) &&
     rstudioapi::isAvailable()) {
-    rstudioapi::viewer(watch_url)
+    rstudioapi::viewer(input)
   } else {
-    utils::browseURL(watch_url)
+    utils::browseURL(input)
   }
 
-  invisible(list(
-    process = p,
-    port = port,
-    url = watch_url,
-    output = output_file
-  ))
+  # # 6. Start refreshing
+  # refresh_viewer()
+
+  # return something
+  # invisible(list(
+  #   process = p,
+  #   port = port,
+  #   url = watch_url,
+  #   output = output_file
+  # ))
+  invisible(p)
 }
 
 
@@ -96,3 +98,26 @@ typr_watch_stop <- function() {
 
   invisible(NULL)
 }
+
+# # Function to open and refresh PDF in viewer
+# refresh_viewer <- function(path) {
+#
+#   # Use rstudioapi if available, otherwise fall back to default viewer
+#   if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+#     # Use RStudio's viewer to display the PDF
+#     rstudioapi::viewer(path)
+#   } else {
+#     # Fall back to regular viewer
+#     viewer <- getOption("viewer")
+#     if (!is.null(viewer)) {
+#       viewer(path)
+#     } else {
+#       utils::browseURL(path)
+#     }
+#   }
+#
+#   # Schedule next refresh
+#   later::later(refresh_viewer, delay = 2) # Refresh every 2 seconds
+# }
+
+
