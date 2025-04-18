@@ -59,16 +59,16 @@ typr_watch <- function(input = NULL, output_file = NULL,
 
   cli::cli_inform(c(
     'Typst watch process started.',
- #   'You can view the output at {.url {watch_url}}.',
+    #   'You can view the output at {.url {watch_url}}.',
     'Run {.fn typr_watch_stop} to stop the process.'
   ))
 
   # 5. Open the output file in the viewer
   if (requireNamespace('rstudioapi', quietly = TRUE) &&
     rstudioapi::isAvailable()) {
-    rstudioapi::viewer(input)
+    rstudioapi::viewer(output_file)
   } else {
-    utils::browseURL(input)
+    utils::browseURL(output_file)
   }
 
   # # 6. Start refreshing
@@ -119,5 +119,3 @@ typr_watch_stop <- function() {
 #   # Schedule next refresh
 #   later::later(refresh_viewer, delay = 2) # Refresh every 2 seconds
 # }
-
-

@@ -34,7 +34,7 @@ typr_init <- function(template = NULL, version = NULL, dir = NULL, typst_args = 
   message(out)
 
   if (is.null(dir)) {
-    sub("^@preview/([^:]+)(:.*)?$", "\\1", template)
+    sub('^@preview/([^:]+)(:.*)?$', '\\1', template)
   } else {
     dir
   }

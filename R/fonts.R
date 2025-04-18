@@ -7,5 +7,5 @@
 #' typr_fonts()
 typr_fonts <- function() {
   out <- typr_run(args = 'fonts')$stdout
-  strsplit(out, '\n')
+  strsplit(out, '\n')[[1]]
 }

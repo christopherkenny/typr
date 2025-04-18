@@ -24,6 +24,8 @@ Depends:
     R (>= 4.1.0)
 Suggests: 
     jsonlite,
-    rstudioapi
+    rstudioapi,
+    testthat (>= 3.0.0)
 SystemRequirements: Typst command line tool (<https://github.com/typst/typst>) 
     or Quarto command line tool (<https://github.com/quarto-dev/quarto-cli>).
+Config/testthat/edition: 3
