@@ -20,4 +20,5 @@ Imports:
 Depends: 
     R (>= 4.1.0)
 Suggests: 
+    jsonlite,
     rstudioapi

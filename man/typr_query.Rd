@@ -17,6 +17,8 @@ typr_query(
 \item{selector}{a string to search for, e.g. a "\if{html}{\out{<label>}}"}
 
 \item{typst_args}{Additional arguments to pass to Typst. Can be listed with \code{typr_help('query')}}
+
+\item{as_json}{if \code{TRUE}, return a list, otherwise a character string}
 }
 \value{
 a length one character with json syntax if \code{!as_json}, otherwise a list
