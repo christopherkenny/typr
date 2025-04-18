@@ -13,7 +13,7 @@ will try to use Quarto, which bundles Typst.
 ## Installation
 
 You can install the development version of `typr` from
-\[GitHub\](<https://github.com/christopherkenny/typr> with:
+[GitHub](https://github.com/christopherkenny/typr) with:
 
 ``` r
 # install.packages('pak')
@@ -36,7 +36,7 @@ doc <- c(
 )
 
 typr_compile(doc, output_format = 'png')
-#> C:/Users/chris/AppData/Local/Temp/RtmpCgw0pG/file30b85bda4787.png
+#> C:/Users/chris/AppData/Local/Temp/RtmpiOryt6/file5c2c68935ed3.png
 ```
 
 <figure>

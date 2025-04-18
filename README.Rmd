@@ -24,7 +24,7 @@ If the Typst CLI is not installed, it will try to use Quarto, which bundles Typs
 
 ## Installation
 
-You can install the development version of `typr` from [GitHub](https://github.com/christopherkenny/typr with:
+You can install the development version of `typr` from [GitHub](https://github.com/christopherkenny/typr) with:
 
 ``` r
 # install.packages('pak')
