@@ -10,12 +10,13 @@
 #'
 #' @examplesIf has_any_typst()
 #' typr_compile('hello world')
-#' typr_compile(input = 'Hello world', output_format = 'png',
-#'   typst_args = c('--ppi', '300'))
+#' typr_compile(
+#'   input = 'Hello world', output_format = 'png',
+#'   typst_args = c('--ppi', '300')
+#' )
 typr_compile <- function(input = NULL, output_file = NULL,
                          output_format = c('pdf', 'png', 'svg', 'html'),
                          typst_args = NULL) {
-
   output_format <- match.arg(output_format)
 
   if (is.null(input)) {
@@ -23,10 +24,7 @@ typr_compile <- function(input = NULL, output_file = NULL,
   }
 
   if (is.character(input)) {
-    if (!grepl('.typ$', input)) {
-      if (length(input) > 1) {
-        input <- paste0(input, collapse = '\n')
-      }
+    if (!grepl('.typ$', input)[1]) {
       txt_input <- input
       input <- fs::file_temp(ext = 'typ')
       writeLines(txt_input, con = input)

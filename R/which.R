@@ -6,7 +6,6 @@
 #' @examples
 #' typr_which_typst()
 typr_which_typst <- function() {
-
   opt <- getOption('typr.typst')
 
   if (!is.null(opt)) {

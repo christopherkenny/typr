@@ -18,9 +18,12 @@ has_any_typst <- function() {
 #' @export
 has_typst_cli <- function() {
   status <- NULL
-  try({
-    status <- processx::run('typst')$status
-  }, silent = TRUE)
+  try(
+    {
+      status <- processx::run('typst')$status
+    },
+    silent = TRUE
+  )
   !is.null(status)
 }
 
@@ -28,9 +31,12 @@ has_typst_cli <- function() {
 #' @export
 has_quarto_typst <- function() {
   status <- NULL
-  try({
-    status <- processx::run('quarto', 'typst')$status
-  }, silent = TRUE)
+  try(
+    {
+      status <- processx::run('quarto', 'typst')$status
+    },
+    silent = TRUE
+  )
   !is.null(status)
 }
 

@@ -27,5 +27,5 @@ Query within a Typst file
 \examples{
 tf <- fs::file_temp(ext = 'typ')
 writeLines(text = '= test <lbl>', con = tf)
-typr_query(input = tf, selector = "<lbl>")
+typr_query(input = tf, selector = '<lbl>')
 }

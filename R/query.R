@@ -10,10 +10,9 @@
 #' @examples
 #' tf <- fs::file_temp(ext = 'typ')
 #' writeLines(text = '= test <lbl>', con = tf)
-#' typr_query(input = tf, selector = "<lbl>")
+#' typr_query(input = tf, selector = '<lbl>')
 typr_query <- function(input = NULL, selector = NULL, typst_args = NULL,
                        as_json = !rlang::is_installed('jsonlite')) {
-
   if (is.null(input)) {
     cli::cli_abort('{.arg input} must not be {.val NULL}.')
   }
