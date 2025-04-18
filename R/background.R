@@ -5,7 +5,12 @@ typr_background <- function(args = character(0), typst = typr_which_typst()) {
 
   if (!'--port' %in% args) {
     # pick a random port
-    port <- sample(10000:65535, 1)
+    excluded <- c(
+      1719, 1720, 1723, 2049, 3659, 4045,
+      5060, 5061, 6000, 6566,
+      6665:6669, 6697, 10080
+    )
+    port <- sample(setdiff(1024:9999, excluded), 1)
     args <- c(args, '--port', port)
   }
 
@@ -23,6 +28,4 @@ typr_background <- function(args = character(0), typst = typr_which_typst()) {
       cli::cli_abort('Problem running `typst`.', parent = e)
     }
   )
-
-  p
 }

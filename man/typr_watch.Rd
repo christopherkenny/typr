@@ -2,13 +2,14 @@
 % Please edit documentation in R/watch.R
 \name{typr_watch}
 \alias{typr_watch}
-\title{Compile a Typst document}
+\title{Watch a Typst document}
 \usage{
 typr_watch(
   input = NULL,
   output_file = NULL,
   output_format = c("pdf", "png", "svg", "html"),
-  typst_args = NULL
+  typst_args = NULL,
+  port = NULL
 )
 }
 \arguments{
@@ -18,13 +19,15 @@ typr_watch(
 
 \item{output_format}{format to use. One of \code{c('pdf', 'png', 'svg', 'html')},}
 
-\item{typst_args}{Additional arguments to pass to Typst. Can be listed with \code{typr_help('compile')}}
+\item{typst_args}{Additional arguments to pass to Typst. Can be listed with \code{typr_help('watch')}}
+
+\item{port}{port to use. If \code{NULL}, a random port will be used.}
 }
 \value{
 a path to the created file
 }
 \description{
-Compile a Typst document
+Watch a Typst document
 }
 \examples{
 \dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
