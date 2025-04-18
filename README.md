@@ -4,6 +4,8 @@
 # typr <img src='man/figures/logo.png' align='right' height='100' alt='' />
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/christopherkenny/typr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/christopherkenny/typr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `typr` is to render Typst documents from R. By default, it
@@ -36,7 +38,7 @@ doc <- c(
 )
 
 typr_compile(doc, output_format = 'png')
-#> C:/Users/chris/AppData/Local/Temp/RtmpiOryt6/file5c2c68935ed3.png
+#> C:/Users/chris/AppData/Local/Temp/Rtmpeow7sK/filea881b5c2983.png
 ```
 
 <figure>
