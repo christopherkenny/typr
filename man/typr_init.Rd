@@ -17,7 +17,7 @@ string does not specify \verb{@preview} or \verb{@local}, \code{'@preview'} will
 \item{typst_args}{Additional arguments to pass to Typst. Can be listed with \code{typr_help('init')}}
 }
 \value{
-a path, invisibly
+a directory, invisibly
 }
 \description{
 Create a project from a template

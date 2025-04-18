@@ -6,7 +6,7 @@
 #' @param dir The project directory
 #' @param typst_args Additional arguments to pass to Typst. Can be listed with `typr_help('init')`
 #'
-#' @returns a path, invisibly
+#' @returns a directory, invisibly
 #' @export
 #'
 #' @examplesIf has_any_typst()
@@ -29,8 +29,13 @@ typr_init <- function(template = NULL, version = NULL, dir = NULL, typst_args = 
     template <- paste0(template, version)
   }
 
-  out <- typr_run(args = c('init', template, dir, typst_args))$stdout
+  out <- typr_run(args = c('init', template, dir, typst_args))$stderr
 
-  # TODO check if any additional processing is needed
-  out
+  message(out)
+
+  if (is.null(dir)) {
+    sub("^@preview/([^:]+)(:.*)?$", "\\1", template)
+  } else {
+    dir
+  }
 }
