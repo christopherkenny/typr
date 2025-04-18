@@ -1,13 +1,16 @@
 Package: typr
 Title: Write and Render 'Typst' Documents
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R:
     person(given = "Christopher T.",
            family = "Kenny",
            role = c("aut", "cre"),
            email = "christopherkenny@fas.harvard.edu",
            comment = c(ORCID = "0000-0002-9386-6860"))
-Description: What the package does (one paragraph).
+Description: Compile 'Typst' files using the 'typst-cli' (<https://typst.app>)
+    command line tool. Automatically falls back to rendering via embedded 'Typst'
+    from 'Quarto' (<https://quarto.org>) if 'Typst' is not installed. Includes
+    utilities to check for 'typst-cli' availability and run 'Typst' commands.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -22,3 +25,5 @@ Depends:
 Suggests: 
     jsonlite,
     rstudioapi
+SystemRequirements: Typst command line tool (<https://github.com/typst/typst>) 
+    or Quarto command line tool (<https://github.com/quarto-dev/quarto-cli>).
