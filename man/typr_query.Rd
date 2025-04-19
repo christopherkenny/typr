@@ -14,7 +14,7 @@ typr_query(
 \arguments{
 \item{input}{a path to a \code{.typ} file}
 
-\item{selector}{a string to search for, e.g. a "\if{html}{\out{<label>}}"}
+\item{selector}{a string to search for, e.g. a \code{"<label>"}}
 
 \item{typst_args}{Additional arguments to pass to Typst. Can be listed with \code{typr_help('query')}}
 

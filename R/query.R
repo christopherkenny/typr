@@ -1,7 +1,7 @@
 #' Query within a Typst file
 #'
 #' @param input a path to a `.typ` file
-#' @param selector a string to search for, e.g. a "<label>"
+#' @param selector a string to search for, e.g. a `"<label>"`
 #' @param typst_args Additional arguments to pass to Typst. Can be listed with `typr_help('query')`
 #' @param as_json if `TRUE`, return a list, otherwise a character string
 #'
