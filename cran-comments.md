@@ -1,3 +1,7 @@
+## Additional Notes
+
+This fixes the CRAN note by catching cases where json returned by `typr_query()` was malformed.
+
 ## Test environments
 
 * local R installation (Windows 11), R 4.5.0
@@ -9,6 +13,4 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* This is a new release.
+0 errors | 0 warnings | 0 notes

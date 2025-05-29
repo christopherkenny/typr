@@ -6,7 +6,7 @@ skip_if_no_internet <- function(site) {
   out <- NULL
 
   try({
-    out <- curlGetHeaders(url = sitr)
+    out <- curlGetHeaders(url = site)
   })
 
   if (is.null(out)) {

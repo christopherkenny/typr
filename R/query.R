@@ -10,7 +10,7 @@
 #'
 #' @examplesIf has_any_typst()
 #' tf <- fs::file_temp(ext = 'typ')
-#' writeLines(text = '= test <lbl>', con = tf)
+#' writeLines(text = '= test <lbl>\n', con = tf)
 #' typr_query(input = tf, selector = '<lbl>')
 typr_query <- function(input = NULL, selector = NULL, typst_args = NULL,
                        as_json = !rlang::is_installed('jsonlite')) {
@@ -34,7 +34,22 @@ typr_query <- function(input = NULL, selector = NULL, typst_args = NULL,
       ))
       out
     } else {
-      jsonlite::fromJSON(txt = out, simplifyVector = TRUE)
+
+      out2 <- NULL
+
+      try({
+        out2 <- jsonlite::fromJSON(txt = out, simplifyVector = TRUE)
+      }, silent = TRUE)
+
+      if (is.null(out2)) {
+        cli::cli_warn(c(
+          x = 'Failed to parse the output as JSON.',
+          i = 'Returning raw `json`.'
+        ))
+        out
+      } else {
+        out2
+      }
     }
   }
 }
