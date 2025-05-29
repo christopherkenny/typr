@@ -29,7 +29,7 @@ Query within a Typst file
 \examples{
 \dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 tf <- fs::file_temp(ext = 'typ')
-writeLines(text = '= test <lbl>', con = tf)
+writeLines(text = '= test <lbl>\n', con = tf)
 typr_query(input = tf, selector = '<lbl>')
 \dontshow{\}) # examplesIf}
 }
