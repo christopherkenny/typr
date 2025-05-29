@@ -23,14 +23,14 @@ typr_query <- function(input = NULL, selector = NULL, typst_args = NULL,
   }
 
   out <- typr_run(args = c('query', input, selector, typst_args))$stdout
-
+return(out)
   if (as_json) {
     out
   } else {
     if (!rlang::is_installed('jsonlite')) {
       cli::cli_warn(c(
         x = '{.pkg jsonlite} is required when {.arg as_json = FALSE}.',
-        i = 'Returning raw `json`.'
+        i = 'Returning raw `json` as a string.'
       ))
       out
     } else {
@@ -44,7 +44,7 @@ typr_query <- function(input = NULL, selector = NULL, typst_args = NULL,
       if (is.null(out2)) {
         cli::cli_warn(c(
           x = 'Failed to parse the output as JSON.',
-          i = 'Returning raw `json`.'
+          i = 'Returning raw `json` as a string.'
         ))
         out
       } else {
