@@ -1,6 +1,12 @@
+## Resubmission
+
+* The prior submission was flagged for a leaving a file on Debian. There was a 
+  stray call to `utils::browseURL()` that was not wrapped in `interactive()`,
+  which is now fixed.
+
 ## Additional Notes
 
-This fixes the CRAN note by catching cases where json returned by `typr_query()` was malformed.
+This fixes the CRAN error by catching cases where json returned by `typr_query()` was malformed.
 
 ## Test environments
 

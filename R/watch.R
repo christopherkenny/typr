@@ -65,9 +65,9 @@ typr_watch <- function(input = NULL, output_file = NULL,
 
   # 5. Open the output file in the viewer
   if (requireNamespace('rstudioapi', quietly = TRUE) &&
-    rstudioapi::isAvailable()) {
+    rstudioapi::isAvailable() && interactive()) {
     rstudioapi::viewer(output_file)
-  } else {
+  } else if (interactive()) {
     utils::browseURL(output_file)
   }
 
