@@ -13,7 +13,7 @@
 #' writeLines(text = '= test <lbl>\n', con = tf)
 #' typr_query(input = tf, selector = '<lbl>')
 typr_query <- function(input = NULL, selector = NULL, typst_args = NULL,
-                       as_json = !rlang::is_installed('jsonlite')) {
+                       as_json = rlang::is_installed('jsonlite')) {
   if (is.null(input)) {
     cli::cli_abort('{.arg input} must not be {.val NULL}.')
   }
@@ -23,8 +23,8 @@ typr_query <- function(input = NULL, selector = NULL, typst_args = NULL,
   }
 
   out <- typr_run(args = c('query', input, selector, typst_args))$stdout
-return(out)
-  if (as_json) {
+
+  if (!as_json) {
     out
   } else {
     if (!rlang::is_installed('jsonlite')) {

@@ -8,7 +8,7 @@ typr_query(
   input = NULL,
   selector = NULL,
   typst_args = NULL,
-  as_json = !rlang::is_installed("jsonlite")
+  as_json = rlang::is_installed("jsonlite")
 )
 }
 \arguments{
