@@ -1,6 +1,7 @@
 # Retrieve shell completions
 
-Retrieve shell completions
+Support for this function was added in Typst 0.14.0. If an earlier
+version is in used, an empty character vector is returned.
 
 ## Usage
 

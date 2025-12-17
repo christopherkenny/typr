@@ -1,6 +1,7 @@
 # Display Typst Debugging Information
 
-Display Typst Debugging Information
+Support for this function was added in Typst 0.14.0. If an earlier
+version is in used, an empty character vector is returned.
 
 ## Usage
 
