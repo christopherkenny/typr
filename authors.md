@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/christopherkenny/typr/blob/v0.0.4/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/christopherkenny/typr/blob/main/DESCRIPTION)
 
 Kenny C (2025). *typr: Write and Render 'Typst' Documents*. R package
 version 0.0.4, <http://christophertkenny.com/typr/>.
