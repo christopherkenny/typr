@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2025-12-17T16:13Z
+last_built: 2025-12-17T16:52Z
 urls:
   reference: http://christophertkenny.com/typr/reference
   article: http://christophertkenny.com/typr/articles

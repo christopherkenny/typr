@@ -12,10 +12,14 @@
   : Find if Typst is available
 - [`typr_compile()`](http://christophertkenny.com/typr/reference/typr_compile.md)
   : Compile a Typst document
+- [`typr_completions()`](http://christophertkenny.com/typr/reference/typr_completions.md)
+  : Retrieve shell completions
 - [`typr_fonts()`](http://christophertkenny.com/typr/reference/typr_fonts.md)
   : List Available Typst Fonts
 - [`typr_help()`](http://christophertkenny.com/typr/reference/typr_help.md)
   : Get Help Information for a Typst command
+- [`typr_info()`](http://christophertkenny.com/typr/reference/typr_info.md)
+  : Display Typst Debugging Information
 - [`typr_init()`](http://christophertkenny.com/typr/reference/typr_init.md)
   : Create a project from a template
 - [`typr_query()`](http://christophertkenny.com/typr/reference/typr_query.md)
