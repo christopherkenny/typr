@@ -10,7 +10,8 @@ typr_info()
 a character vector of debugging information
 }
 \description{
-Display Typst Debugging Information
+Support for this function was added in Typst 0.14.0. If an earlier version
+is in used, an empty character vector is returned.
 }
 \examples{
 \dontshow{if (has_any_typst()) withAutoprint(\{ # examplesIf}

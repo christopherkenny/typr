@@ -14,7 +14,8 @@ typr_completions(shell = c("bash", "elvish", "fish", "powershell", "zsh"))
 a character vector of debugging information
 }
 \description{
-Retrieve shell completions
+Support for this function was added in Typst 0.14.0. If an earlier version
+is in used, an empty character vector is returned.
 }
 \examples{
 \dontshow{if (has_any_typst()) withAutoprint(\{ # examplesIf}
