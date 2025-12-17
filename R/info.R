@@ -9,7 +9,7 @@
 #' @examplesIf has_any_typst()
 #' typr_info()
 typr_info <- function() {
-  if (typr_version() < '0.14.0') {
+  if (!isTRUE(typr_version() >= '0.14.0')) {
     return(character())
   }
   out <- typr_run(args = 'info')$stderr

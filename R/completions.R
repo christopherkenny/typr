@@ -13,7 +13,7 @@
 #' typr_completions(shell = 'powershell')
 typr_completions <- function(shell = c('bash', 'elvish', 'fish',
                                        'powershell', 'zsh')) {
-  if (typr_version() < '0.14.0') {
+  if (!isTRUE(typr_version() >= '0.14.0')) {
     return(character())
   }
   shell <- match.arg(shell)
