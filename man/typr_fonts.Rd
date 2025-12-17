@@ -13,7 +13,7 @@ a character vector of font names
 List Available Typst Fonts
 }
 \examples{
-\dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (has_any_typst()) withAutoprint(\{ # examplesIf}
 typr_fonts()
 \dontshow{\}) # examplesIf}
 }

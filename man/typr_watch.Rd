@@ -30,7 +30,7 @@ a path to the created file
 Watch a Typst document
 }
 \examples{
-\dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (has_any_typst()) withAutoprint(\{ # examplesIf}
 tf <- fs::file_temp(ext = 'typ')
 writeLines(text = '= test', con = tf)
 typr_watch(tf)

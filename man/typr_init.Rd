@@ -23,7 +23,7 @@ a directory, invisibly
 Create a project from a template
 }
 \examples{
-\dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (has_any_typst()) withAutoprint(\{ # examplesIf}
 typr_init('charged-ieee', dir = paste0(tempdir(), '/typr_example'))
 \dontshow{\}) # examplesIf}
 }

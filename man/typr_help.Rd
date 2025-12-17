@@ -17,7 +17,7 @@ Prints a message to the terminal with help information.
 Silently returns the content as character which can be printed with \code{cat()}.
 }
 \examples{
-\dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (has_any_typst()) withAutoprint(\{ # examplesIf}
 typr_help('compile')
 \dontshow{\}) # examplesIf}
 }

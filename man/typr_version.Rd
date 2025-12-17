@@ -16,7 +16,7 @@ a version, numeric if \code{!keep_hash}
 Get installed Typst version
 }
 \examples{
-\dontshow{if (has_any_typst()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (has_any_typst()) withAutoprint(\{ # examplesIf}
 typr_version()
 \dontshow{\}) # examplesIf}
 }
