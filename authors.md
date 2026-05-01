@@ -10,13 +10,13 @@
 Source:
 [`DESCRIPTION`](https://github.com/christopherkenny/typr/blob/main/DESCRIPTION)
 
-Kenny C (2025). *typr: Write and Render 'Typst' Documents*. R package
+Kenny C (2026). *typr: Write and Render 'Typst' Documents*. R package
 version 0.0.4, <http://christophertkenny.com/typr/>.
 
     @Manual{,
       title = {typr: Write and Render 'Typst' Documents},
       author = {Christopher T. Kenny},
-      year = {2025},
+      year = {2026},
       note = {R package version 0.0.4},
       url = {http://christophertkenny.com/typr/},
     }

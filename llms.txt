@@ -10,6 +10,7 @@ You can install the development version of `typr` from
 [GitHub](https://github.com/christopherkenny/typr) with:
 
 ``` r
+
 # install.packages('pak')
 pak::pak('christopherkenny/typr')
 ```
@@ -21,6 +22,7 @@ document. It can take a path to a file or lines to use. Below, I pass
 lines to compile:
 
 ``` r
+
 library(typr)
 
 doc <- c(
