@@ -29,4 +29,5 @@ Suggests:
 SystemRequirements: Typst command line tool (<https://github.com/typst/typst>) 
     or Quarto command line tool (<https://github.com/quarto-dev/quarto-cli>).
 Config/testthat/edition: 3
+Config/Needs/website: christopherkenny/ctktemplate
 URL: http://christophertkenny.com/typr/, https://github.com/christopherkenny/typr
